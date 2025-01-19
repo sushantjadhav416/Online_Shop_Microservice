@@ -1,4 +1,4 @@
-package com.shop.microservice.inventory.Modal;
+package com.shop.microservice.orderMicroservice.Modal;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

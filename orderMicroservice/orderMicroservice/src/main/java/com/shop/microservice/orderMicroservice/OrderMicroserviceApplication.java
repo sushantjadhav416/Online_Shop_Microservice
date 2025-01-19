@@ -2,8 +2,10 @@ package com.shop.microservice.orderMicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
+@EnableFeignClients
 public class OrderMicroserviceApplication {
 
 	public static void main(String[] args) {

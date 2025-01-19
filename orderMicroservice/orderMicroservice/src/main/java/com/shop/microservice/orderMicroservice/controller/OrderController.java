@@ -3,6 +3,7 @@ package com.shop.microservice.orderMicroservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,10 +26,14 @@ public class OrderController {
 	@PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public String placeOrder(@RequestBody OrderRequest orderRequest) {
+		try {
         orderService.placeOrder(orderRequest);
-        return "Order Placed Successfully";
+        return "Order Placed successfully";
+		}
+		catch (Exception e) {
+			return e.getMessage();		
+		}
     }
 	
 	
-
 }
