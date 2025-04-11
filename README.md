@@ -21,5 +21,6 @@
 - Kubernetes
 
 ## Application Architecture
+![Alt text](Appilcation_Architecture.png)
 
 
